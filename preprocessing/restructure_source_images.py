@@ -20,7 +20,7 @@ from preprocessing.utils import calculate_set_indices, extract_image_key
 ###################################
 image_path = r"C:\Users\alexa\Downloads\Fotos"
 output_path = r"C:\Users\alexa\Downloads\Fotos_filtered"
-set_fractions = {"train": 0.7, "validation": 0.2, "test": 0.1}
+set_fractions = {"train": 0.7, "test": 0.2, "val": 0.1}
 
 ###################################
 #      Validate Configuration     #
