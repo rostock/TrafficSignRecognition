@@ -11,8 +11,20 @@ In images taken during 360° "street view" rides, traffic signs should be detect
 2. Annotations are used for fine-tuning a pre-trained model – enabling an existing model that can distinguish everyday objects to specifically classify traffic signs.
 3. The resulting model is then used during inference (application) to automatically draw frames around traffic signs in new images.
 
-## 1) Annotation
+- TODO: Add Image Preprocessing to the diagram
+
+## 1) Image Preprocessing
+Filter & Restructure source images using the `preprocessing/restructure_source_images.py` script.
+
+### Running the preprocessing script
+1. Download the source images to a local folder.
+2. Edit the `preprocessing/restructure_source_images.py` script to point to the source images folder.
+3. Run the script: `python preprocessing/restructure_source_images.py`
+
+## 2) Annotation
 Using the Compouter Vision Annotation Tool (CVAT).
+
+- TODO Visualization
 
 ### Installing the CVAT Server
 Assuming a linux environment with [docker](https://docs.docker.com/engine/install/ubuntu/) and [docker-compose](https://docs.docker.com/compose/install/) installed.
@@ -24,37 +36,48 @@ Assuming a linux environment with [docker](https://docs.docker.com/engine/instal
 2. Open the URL `http://localhost:8080` in your web-browser to open CVAT
 
 ### Annotation Process
-1. Inside the CVAT web interface create a new project using `annotation/labels.json`.
-2. Open the newly created project and create a new task, select a subset (train/test/val), upload some of the image files there.
-3. Select the newly created job to start annotating.
- 
-TODO: Pre-selecting Traffic Signs in the annotation task based from previous labeling iterations.
-
-TODO Visualization
+1. Inside the CVAT web interface create a new project using the labels from `annotation/labels.tsr_example.json`.
+   (In the future, we will have the finale labels in such a file, but for now, we use this example.)
+2. Open the newly created project and create a new task, select a subset
+   (type one of train/test/val manually, do not select the existing ones with slightly different writing), 
+   upload some of the image files there (adhere to the annotation guidelines).
+3. Select the newly created job to start annotating  (adhere to the annotation guidelines).
+4. Once all annotations are finished, export the annotations via "Project -> Export Dataset" in _YOLOv8 Segmentation 1.0_ format.
+5. Additionally, you may backup the project via "Project -> Backup".
 
 ### Stopping the CVAT Server
 1. Run the stop script `annotation/stop.sh`
 
-## 2) Preparing the Dataset
-Export from CVAT and copy into the datasets folder as dataset with the name `tsr`.
+### Later: Iterative Annotation
+Pre-selecting Traffic Signs in the annotation task based from previous labeling iterations will be implemented in the future.
 
-It should follow the same structure as `tsr_example`.
 
-**TODO: Add tsr_example dataset**
+## 3) Preparing the Dataset
 
-## 3) AI Recognition Environment
+The export from CVAT should be unzipped and copied into a subfolder in the datasets folder, e.g. to a subfolder named `tsr`.
+
+Once the dataset is copied there, some paths inside the txt and yaml files of the export need to be adjusted.
+For this, please run the `datasets/fix_path.sh` script like this, where `tsr` is the name of the subfolder you created for your dataset:
+
+```bash
+datasets/fix_path.sh tsr
+```
+
+## 4) AI Recognition Environment
 ### Installing 
 - Run `recognition/install.sh` to set up a docker container that serves as a starting point for the pre-made python scripts
 
 ### Start Training
 - ``recognition/run.sh train tsr_example``
+
 - TODO Validation
 
 ### Start Inference
 - ``recognition/run.sh inference tsr_example``
+
 - TODO Export
 
 ### Installing for development
 - Run `recognition/install_dev.sh` to install the python environment locally
 
-TODO Visualization
+- TODO Visualization
