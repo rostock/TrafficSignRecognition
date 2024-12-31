@@ -1,0 +1,29 @@
+names:
+  0: 205_vorfahrt_gewaehren
+  1: 206_halt_vorfahrt_gewaehren
+  2: 123_arbeitsstelle
+  3: 274_hoechstgeschwindigkeit
+  4: parkplatz
+  5: 250_verbot_alle
+  6: 274_1_zone_30
+  7: 283_absolutes_halteverbot
+  8: 286_eingeschraenktes_halteverbot
+  9: 283_10_absolutes_halteverbot_anfang_rechts
+  10: 283_30_absolutes_halteverbot_mitte_rechts
+  11: 283_20_absolutes_halteverbot_ende_rechts
+  12: 286_10_eingeschraenktes_halteverbot_anfang_rechts
+  13: 286_30_eingeschraenktes_halteverbot_mitte_rechts
+  14: 286_20_eingeschraenktes_halteverbot_ende_rechts
+  15: 209_fahrtrichtung_rechts
+  16: 314_10_parken_links
+  17: 314_20_parken_rechts
+  18: 314_30_parken_mitte
+  19: 325_1_verkehrsberuhigter_bereich_beginn
+  20: 325_2_verkehrsberuhigter_bereich_ende
+  21: 314_50_parkhaus
+  22: 209_30_fahrtrichtung_geradeaus
+  23: 265_hoehe
+path: .
+test: tsr_example/test.txt
+train: tsr_example/train.txt
+val: tsr_example/val.txt
