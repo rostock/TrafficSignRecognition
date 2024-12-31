@@ -63,6 +63,13 @@ For this, please run the `datasets/fix_path.sh` script like this, where `tsr` is
 datasets/fix_path.sh tsr
 ```
 
+### Viewing dataset statistics
+To view the statistics of the dataset, run the `datasets/stats.py` script like this, where `tsr` is the name of the subfolder you created for your dataset:
+
+```bash
+python datasets/stats.py tsr
+```
+
 ## 4) AI Recognition Environment
 ### Installing 
 - Run `recognition/install.sh` to set up a docker container that serves as a starting point for the pre-made python scripts
