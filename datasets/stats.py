@@ -58,7 +58,7 @@ def aggregate_statistics(dataset_path_absolute):
 
     return statistics
 
-def getNamesForIds(dataset_path_absolute):
+def get_names_for_ids(dataset_path_absolute):
     names = {}
     with open(os.path.join(dataset_path_absolute, "data.yaml"), 'r') as file:
         data = yaml.safe_load(file)
@@ -67,7 +67,7 @@ def getNamesForIds(dataset_path_absolute):
     return names
 
 def print_statistics(statistics, dataset_path_absolute):
-    names = getNamesForIds(dataset_path_absolute)
+    names = get_names_for_ids(dataset_path_absolute)
     for set_name, class_counts in statistics.items():
         print(f"Statistics for {set_name} set:")
         for class_id, count in sorted(class_counts.items()):
