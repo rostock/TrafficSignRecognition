@@ -71,6 +71,9 @@ python datasets/stats.py tsr
 ```
 
 ## 4) AI Recognition Environment
+`/Attention !\` At the moment there is a known error with resolving file paths in the docker scripts, 
+it will not work out of the box for now.
+
 ### Installing 
 - Run `recognition/install.sh` to set up a docker container that serves as a starting point for the pre-made python scripts
 
