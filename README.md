@@ -27,7 +27,7 @@ Using the Compouter Vision Annotation Tool (CVAT).
 - TODO Visualization
 
 ### Installing the CVAT Server
-Assuming a linux environment with [docker](https://docs.docker.com/engine/install/ubuntu/) and [docker-compose](https://docs.docker.com/compose/install/) installed.
+Assuming a linux environment with [docker](https://docs.docker.com/engine/install/ubuntu/) and [docker compose](https://docs.docker.com/compose/install/) installed.
 
 1. Run the installation script `annotation/install.sh`, it will download cvat to `annotation/cvat` and ask you to create an admin user.
 
