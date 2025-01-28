@@ -7,11 +7,11 @@ In images taken during 360° "street view" rides, traffic signs should be detect
 
 ![tsr_overview.png](docs/tsr_overview.png)
 
-1. Own images are labeled using the annotation tool "CVAT" (manually drawing frames around traffic signs), the annotations are saved in [YOLOv8 Segmentation](https://yolov8.org/yolov8-annotation-format/) format.
-2. Annotations are used for fine-tuning a pre-trained model – enabling an existing model that can distinguish everyday objects to specifically classify traffic signs.
-3. The resulting model is then used during inference (application) to automatically draw frames around traffic signs in new images.
-
-- TODO: Add Image Preprocessing to the diagram
+1. Own images are preprocessed to filter out irrelevant images and restructure the remaining images.
+2. Remaining images are labeled using the annotation tool "CVAT" (manually drawing frames around traffic signs), the annotations are saved in [YOLOv8 Segmentation](https://yolov8.org/yolov8-annotation-format/) format.
+3. Annotations need to be prepared for training by adjusting the paths in the annotation files.
+4. Annotations are used for fine-tuning a pre-trained model – enabling an existing model that can distinguish everyday objects to specifically classify traffic signs.
+5. The resulting model is then used during inference (application) to automatically draw frames around traffic signs in new images.
 
 ## 1) Image Preprocessing
 Filter & Restructure source images using the `preprocessing/restructure_source_images.py` script.
