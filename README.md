@@ -22,9 +22,9 @@ Filter & Restructure source images using the `preprocessing/restructure_source_i
 3. Run the script: `python preprocessing/restructure_source_images.py`
 
 ## 2) Annotation
-Using the Compouter Vision Annotation Tool (CVAT).
+Using the Computer Vision Annotation Tool (CVAT).
 
-- TODO Visualization
+![tsr_annotation.png](docs/tsr_annotation.png)
 
 ### Installing the CVAT Server
 Assuming a linux environment with [docker](https://docs.docker.com/engine/install/ubuntu/) and [docker compose](https://docs.docker.com/compose/install/) installed.
@@ -71,6 +71,8 @@ python datasets/stats.py tsr
 ```
 
 ## 4) AI Recognition Environment
+Using YOLO.
+
 `/Attention !\` At the moment there is a known error with resolving file paths in the docker scripts, 
 it will not work out of the box for now.
 
