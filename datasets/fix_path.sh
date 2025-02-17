@@ -28,9 +28,10 @@ done
 # Update the data.yaml file
 DATA_YAML_PATH="$SUBFOLDER/data.yaml"
 if [ -f "$DATA_YAML_PATH" ]; then
-  sed -i 's|train: train.txt|train: '"$SUBFOLDER"'/train.txt|g' "$DATA_YAML_PATH"
-  sed -i 's|test: test.txt|test: '"$SUBFOLDER"'/test.txt|g' "$DATA_YAML_PATH"
-  sed -i 's|val: val.txt|val: '"$SUBFOLDER"'/val.txt|g' "$DATA_YAML_PATH"
+  sed -i 's|path: .|path: /usr/src/datasets/'"$SUBFOLDER"'/|g' "$DATA_YAML_PATH"
+  sed -i 's|train: train.txt|train: images/train|g' "$DATA_YAML_PATH"
+  sed -i 's|test: test.txt|test: images/test|g' "$DATA_YAML_PATH"
+  sed -i 's|val: val.txt|val: images/val|g' "$DATA_YAML_PATH"
 else
   echo "File $DATA_YAML_PATH does not exist."
   exit 1

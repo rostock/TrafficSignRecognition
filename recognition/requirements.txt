@@ -1,1 +1,1 @@
-ultralytics==8.2.98
+ultralytics==8.3.75

@@ -26,6 +26,9 @@ Using the Computer Vision Annotation Tool (CVAT).
 
 ![tsr_annotation.png](docs/tsr_annotation.png)
 
+- https://github.com/rostock/3DModels/tree/main/Verkehrszeichen/textures
+- https://www.bast.de/DE/Verkehrstechnik/Fachthemen/v1-verkehrszeichen/vz-start.html
+
 ### Installing the CVAT Server
 Assuming a linux environment with [docker](https://docs.docker.com/engine/install/ubuntu/) and [docker compose](https://docs.docker.com/compose/install/) installed.
 
@@ -73,8 +76,7 @@ python datasets/stats.py tsr
 ## 4) AI Recognition Environment
 Using YOLO.
 
-`/Attention !\` At the moment there is a known error with resolving file paths in the docker scripts, 
-it will not work out of the box for now.
+`/Attention !\` At the moment training is not optimized in any way yet, but you can test if it works at all.
 
 ### Installing 
 - Run `recognition/install.sh` to set up a docker container that serves as a starting point for the pre-made python scripts

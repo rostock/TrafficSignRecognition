@@ -23,7 +23,7 @@ names:
   21: 314_50_parkhaus
   22: 209_30_fahrtrichtung_geradeaus
   23: 265_hoehe
-path: .
-test: tsr_example/test.txt
-train: tsr_example/train.txt
-val: tsr_example/val.txt
+path: /usr/src/datasets/tsr_example/
+test: images/test
+train: images/train
+val: images/val

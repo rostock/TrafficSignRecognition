@@ -2,11 +2,11 @@ from ultralytics import YOLO
 import cv2
 import numpy as np
 
-def inference(dataset: str) -> None:
+def inference(dataset_path_absolute: str) -> None:
     # Load a pretrained YOLOv8 model
     model = YOLO("models/retrained.pt")
 
-    img_path = "../datasets/"+dataset+"/test.jpg"
+    img_path = dataset_path_absolute+"/test.jpg"
 
     # Perform object detection on a test image
     results = model(img_path)
