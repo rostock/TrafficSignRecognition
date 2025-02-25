@@ -26,8 +26,7 @@ Using the Computer Vision Annotation Tool (CVAT).
 
 ![tsr_annotation.png](docs/tsr_annotation.png)
 
-- https://github.com/rostock/3DModels/tree/main/Verkehrszeichen/textures
-- https://www.bast.de/DE/Verkehrstechnik/Fachthemen/v1-verkehrszeichen/vz-start.html
+See the list of all traffic sign classes here: [annotation/all_traffic_signs/Readme.md](annotation/all_traffic_signs/Readme.md)
 
 ### Installing the CVAT Server
 Assuming a linux environment with [docker](https://docs.docker.com/engine/install/ubuntu/) and [docker compose](https://docs.docker.com/compose/install/) installed.
