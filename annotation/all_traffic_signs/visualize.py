@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-def txt_to_grid_markdown(input_file, output_file, columns=5):
+def txt_to_grid_markdown(input_file, output_file, columns=3):
     try:
         with open(input_file, "r", encoding="utf-8") as infile:
             lines = [line.strip() for line in infile if line.strip()]
