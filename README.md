@@ -5,7 +5,7 @@ In images taken during 360° "street view" rides, traffic signs should be detect
 
 ## Overview
 
-![tsr_overview.png](docs/tsr_overview.png)
+![tsr_overview.png](docs/img/tsr_overview.png)
 
 1. Own images are preprocessed to filter out irrelevant images and restructure the remaining images.
 2. Remaining images are labeled using the annotation tool "CVAT" (manually drawing frames around traffic signs), the annotations are saved in [YOLOv8 Segmentation](https://yolov8.org/yolov8-annotation-format/) format.
@@ -24,7 +24,7 @@ Filter & Restructure source images using the `preprocessing/restructure_source_i
 ## 2) Annotation
 Using the Computer Vision Annotation Tool (CVAT).
 
-![tsr_annotation.png](docs/tsr_annotation.png)
+![tsr_annotation.png](docs/img/tsr_annotation.png)
 
 See the list of all traffic sign classes here: [annotation/all_traffic_signs/Readme.md](annotation/all_traffic_signs/Readme.md)
 
