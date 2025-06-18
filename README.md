@@ -73,24 +73,5 @@ python datasets/stats.py tsr
 ```
 
 ## 4) AI Recognition Environment
-Using YOLO.
-
-`/Attention !\` At the moment training is not optimized in any way yet, but you can test if it works at all.
-
-### Installing 
-- Run `recognition/install.sh` to set up a docker container that serves as a starting point for the pre-made python scripts
-
-### Start Training
-- ``recognition/run.sh train tsr_example``
-
-- TODO Validation
-
-### Start Inference
-- ``recognition/run.sh inference tsr_example``
-
-- TODO Export
-
-### Installing for development
-- Run `recognition/install_dev.sh` to install the python environment locally
-
-- TODO Visualization
+Using YOLO. 
+See the usage here: [/recognition/README.md](/recognition/README.md)

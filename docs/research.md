@@ -149,3 +149,20 @@ It is noticeable that for some classes (especially parking) the number is 0, alt
 ![](img/example_run_2.png)
 
 The next step is to test the prototype on this data.
+
+## Training Visualization & Auto-Save
+During Training, models should regularly be saved to prevent data loss. When resuming training, models should continue to be trained based on the most recent model.
+
+To visualize training progress and ensure reliable access to logs, a specialized tool should be used. Comparing the most popular options, TensorBoard, Wandb and MLFlow, TensorBoard seems to have the best YOLO integration.
+It is lightweight, easy to integrate, free to use and can be run locally.
+
+![](img/tensorboard.png)
+
+A guide on how to use tensorboard is given in see [/recognition/README.md](/recognition/README.md).
+
+For visualization of the network architecture (not the training progession), you can upload any trained model
+to https://netron.app
+
+![](img/netron.png)
+
+
