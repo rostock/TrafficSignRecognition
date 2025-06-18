@@ -41,3 +41,17 @@ Defines the desired accuracy and how to handle certain situations.
 11. Images without traffic signs are not deleted (except for data protection reasons).
 12. The backs of traffic signs are not marked
 13. Traffic signs in posters, on vehicles, or in reflections are not marked (not desired for our use case). 
+
+## Update CVAT
+To ensure a safe update, please ensure that:
+- all important data (database, images, annotations, config files) are not stored inside the container, but on the host system (use volumes or bind mounts).
+  - volumes:
+    - docker volume create myvolume
+    - docker run -v myvolume:/app/data myimage
+    - or docker run --mount source=myvolume,target=/app/data myimage
+  - bind mount:
+    - docker run -v /pfad/auf/dem/host:/app/data myimage
+    - or docker run --mount type=bind,source=/pfad/auf/dem/host,target=/app/data myimage
+  - or via docker compose 
+
+After this, you can check the content of `update.sh` and use the commands inside to update the container.
